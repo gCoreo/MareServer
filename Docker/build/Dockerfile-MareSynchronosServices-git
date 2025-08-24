@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 as BUILD
 
-RUN git clone --recurse-submodules https://github.com/Wolfgarussy/MareServer
+RUN git clone --recurse-submodules https://github.com/gCoreo/MareServer
 
 WORKDIR /server/MareSynchronosServer/MareSynchronosServices/
 
