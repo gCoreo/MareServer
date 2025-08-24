@@ -1,10 +1,10 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 as BUILD
 
-COPY MareAPI /server/MareAPI
-COPY MareSynchronosServer/MareSynchronosShared /server/MareSynchronosServer/MareSynchronosShared
-COPY MareSynchronosServer/MareSynchronosStaticFilesServer /server/MareSynchronosServer/MareSynchronosStaticFilesServer
+COPY MareAPI /MareServer/MareAPI
+COPY MareSynchronosServer/MareSynchronosShared /MareServer/MareSynchronosServer/MareSynchronosShared
+COPY MareSynchronosServer/MareSynchronosStaticFilesServer /MareServer/MareSynchronosServer/MareSynchronosStaticFilesServer
 
-WORKDIR /server/MareSynchronosServer/MareSynchronosStaticFilesServer/
+WORKDIR /MareServer/MareSynchronosServer/MareSynchronosStaticFilesServer/
 
 RUN dotnet publish \
         --configuration=Release \
